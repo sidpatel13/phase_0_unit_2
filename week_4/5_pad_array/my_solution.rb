@@ -7,14 +7,56 @@
 # I worked on this challenge [by myself, with: ].
 
 # 1. Pseudocode
+=begin
+	
+	
 
 # What is the input?
-# What is the output? (i.e. What should the code return?)
-# What are the steps needed to solve the problem?
+class Array
+def pad!(min_size, word)
+		if self.length > min_size
+			self
+		elsif self.length < min_size
+			(min_size - self.length) times do
+			self << word
+			self
+		end
 
+def pad(min_size, word)
+	self.clone.pad!(min_size,word)
+end
+
+
+
+
+
+# What is the output? (i.e. What should the code return?)
+If the length of the array is greater than minimum size, our method should return the original array.
+If the minimum size is greater than the array, then we are returned a new array the size of the min_size
+with the word included we specified in our method.
+
+# What are the steps needed to solve the problem?
+create array class
+create pad! method
+clone pad! method info in pad
+
+
+=end
 
 # 2. Initial Solution
+class Array
+    def pad!(min_size, word)
+        if self.length > min_size
+            self
+        elsif self.length < min_size
+            (min_size - self.length) times {self << word}
+            self
+        end
 
+    def pad(min_size, word)
+        self.clone.pad!(min_size,word)
+    end
+end
 
 
 
