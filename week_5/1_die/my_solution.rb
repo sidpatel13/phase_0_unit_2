@@ -4,25 +4,35 @@
 # I worked on this challenge [by myself, with: ].
 
 # 2. Pseudocode
-
+=begin
 # Input:
-# Output:
-# Steps:
 
+ Create a sides instance variable that can be used throughout our class in all the methods.
+
+ 
+ # Output:
+ 
+ d = Die.new(6)
+ d.sides => 6
+ d.roll=>#random number between 1 to 6
+ 
+# Steps:
+=end
 
 # 3. Initial Solution
 
 class Die
+  raise ArgumentError.new("You can't make that food") if @sides < 1
   def initialize(sides)
-    # code goes here
+    @sides = sides
   end
   
   def sides
-    # code goes here
+    puts @sides
   end
   
   def roll
-    # code goes here
+    1+rand(@sides)
   end
 end
 
