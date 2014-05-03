@@ -5,16 +5,59 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
             "Annabelle" => 0, "Ditto" => 3}
 
 # Person 1's solution
+#pseudocode
+=begin
+def	
+	new_array = []
+	array.each do |word|
+		if word includes following letter
+			push word into new_array
+		end
+	end
+	new_array
+end
+
+
+def 
+new_hash ={}
+hash.each do |word|
+	if word has the following key
+		push word into new_hash
+	end
+end
+new_hash
+end
+
+
+=end
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
+  new_array = []
+  source.each do |x|
+  	if x.include?(thing_to_find)
+  		new_array << x
+  	end
+  end
+  new_array
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
+    new_hash=[]
+    source.each do |key,value|
+            if (value==thing_to_find)
+            new_hash << key
+            
+            # write to a hash new_hash[key] = value
+        end
+    end
+    new_hash
 end
 
+my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, 
+  "Annabelle" => 0, "Ditto" => 3}
+my_hash_finding_method(my_family_pets_ages, 3)
+
 # Identify and describe the ruby method you implemented. 
-# 
+# So, with this code I was trying to create an empty array or hash, take the words  that included the characters we specified and push them into this new array or hash. I used the Array#each method. I don't think "include" is the proper term to use here. I'm actually going to try to find and update that.
 #
 #
 
