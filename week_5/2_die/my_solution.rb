@@ -8,7 +8,7 @@
 # Input:
 =begin
 class Die
-    def init(l)
+    def init(labels)
         @labels=labels
     end
     
