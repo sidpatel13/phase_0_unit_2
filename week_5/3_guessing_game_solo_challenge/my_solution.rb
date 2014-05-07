@@ -69,9 +69,9 @@ class GuessingGame
         @guess = input
         if @guess < @answer
             ":low"
-            elsif @guess > @answer
+        elsif @guess > @answer
             ":high"
-            elsif @guess = @answer
+        elsif @guess = @answer
             ":correct"
         end
     end
