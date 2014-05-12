@@ -28,24 +28,50 @@
 class CreditCard
 
 def initialize(input)
-    @input = input
+	@input = input.to_s.split("")
+    puts @input
+	raise ArgumentError.new("The number is not 16 digits") if @input.length != 16
 end
 
 
-def split(@input)
-    split = @input.to_s.chars.to_a
-    split.each_with_index do |x,index|
-        if index % 2 == 0
-            x * 2
-        end
-        puts split
-    end
-end
+
+def ccnumber
+  new_array = []
+  #sum = 0
+	@input.each_with_index do |x,index|
+      if index % 2 == 0
+        x = x.to_i * 2
+      	  if x > 9
+      		  split = x.to_s.split("")
+      		  x = split[0].to_i + split[1].to_i
+      	  end
+  	  end
+ #      new_array << @input
+ #      puts new_array
+ #      sum = new_array.inject(:+)
+ #      puts sum
+ 	new_array << x
+ 	end
+ 	sum = new_array.inject(:+)
+ 	#   new_array << x
+ 	#   new_array.each do |x|
+ 	#     sum += x
+ 	#   end
+ 	#  sum
+ 	# end
+ 	# sum = new_array.inject(:+)
+ 	#puts sum
+ 	#puts new_array
+ 	#sum += x
+     #end
+   end
+
 end
 
+#end
+credit_card = CreditCard.new(4563960122001999)
+puts credit_card.ccnumber
 
-credit_card = CreditCard.new
-puts credit_card.split(4563960122001999)
 
 # 4. Refactored Solution
 

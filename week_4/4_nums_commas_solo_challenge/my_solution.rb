@@ -30,8 +30,8 @@ end
 # 2. Initial Solution
 def separate_comma(num)
 	array=num.to_s.chars.to_a.reverse
-	array.each_with
-    == 0 && index > 0
+	array.each_with_index do |x, index|
+		if index % 3 == 0 && index > 0
 			array[index] += ',' 
 		end
 	end
