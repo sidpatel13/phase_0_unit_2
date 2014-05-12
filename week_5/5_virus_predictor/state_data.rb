@@ -1,5 +1,8 @@
 #population density is number of people per square mile as of 2012
-#this data is updated every year with estimates from a 10 year census 
+#this data is updated every year with estimates from a 10 year census
+
+#to create the hash below two different types of syntax are being used. "x" => { y : z
+# It uses => and : to create a hash within a hash. So in hash create a hash for each state.
 
 
 STATE_DATA = {  "Alabama" => {population_density: 94.65, population: 4822023, region: 5, regional_spread: 3},

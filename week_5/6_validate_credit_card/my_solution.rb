@@ -6,6 +6,17 @@
 # 2. Pseudocode
 
 # Input:
+#array = []
+#array << input.to_s.each_character.split('')
+#create index
+#if index % 2 == 0
+#x = take that index's value * 2
+#if x > 9
+#x.to_s.each_character.split('')
+#
+#
+#
+
 # Output:
 # Steps:
 
@@ -16,9 +27,25 @@
 # of exactly 16 digits
 class CreditCard
 
+def initialize(input)
+    @input = input
 end
 
 
+def split(@input)
+    split = @input.to_s.chars.to_a
+    split.each_with_index do |x,index|
+        if index % 2 == 0
+            x * 2
+        end
+        puts split
+    end
+end
+end
+
+
+credit_card = CreditCard.new
+puts credit_card.split(4563960122001999)
 
 # 4. Refactored Solution
 
