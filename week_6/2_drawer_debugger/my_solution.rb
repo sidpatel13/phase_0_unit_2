@@ -68,6 +68,9 @@ attr_reader :type
 
 end
 
+def assert
+  raise "Assertion failed!" unless yield
+end
 
 knife1 = Silverware.new("knife")
 
@@ -107,8 +110,12 @@ remove_fork.eat
 # DRIVER TESTS GO BELOW THIS LINE
 
 
+#def assert
+#raise "Assertion failed!" unless yield
+#end
 
-
+#assert {silverware_drawer.dump == "Your drawer is empty"}
+#assert {remove_fork.eat == "eating with the fork"}
 
 
 # 5. Reflection 

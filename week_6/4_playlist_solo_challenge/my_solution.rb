@@ -5,11 +5,122 @@
 
 
 # Pseudocode
+=begin
+
+ class Song
+    
+  def initialize(song, singer)
+    @song = song
+    @singer = singer
+  end
+
+  def play
+    puts "#{song}, #{singer}"
+  end
+ 
+ 
+ 
+ end
+ 
+class Playlist
+ 
+  def initialize(*input)
+    @contents = input
+ 
+  end
+ 
+  def add (*input)
+    @contents += input
+     
+  end
+ 
+  def num_of_tracks
+    self.length // @contents.length
+  end
+ 
+  def remove(song)
+    @contents.delete(song)
+
+  end
+  
+  def includes?(song)
+    @playlist.include?(song)
+  end
+  
+  def play_all
+    puts @contents
+  end
+ 
+  def display
+    @contents.each do |x|
+        puts x
+    end
+  end
+ 
+end
+ 
+ 
+ 
+ 
+ 
+ 
+=end
 
 
 
 # Initial Solution
 
+class Song
+    
+    def initialize(song, singer)
+        @song = song
+        @singer = singer
+    end
+    
+    def play
+        puts "#{@song}, #{@singer}"
+    end
+    
+    
+    
+end
+
+class Playlist
+    
+    def initialize(*multiple_song)
+        @contents = multiple_song
+        
+    end
+    
+    def add (*multiple_song)
+        @contents += multiple_song
+        
+    end
+    
+    def num_of_tracks
+        @contents.length
+    end
+    
+    def remove(song)
+        @contents.delete(song)
+        
+    end
+    
+    def includes?(song)
+        @contents.include?(song)
+    end
+    
+    def play_all
+        puts @contents
+    end
+    
+    def display
+        @contents.each do |x|
+            puts x
+        end
+    end
+    
+end
 
 
 
