@@ -11,9 +11,8 @@
 #create index
 #if index % 2 == 0
 #x = take that index's value * 2
-#if x > 9
-#x.to_s.each_character.split('')
-#
+#join all characters and split them again
+#add up all of the terms in the array
 #
 #
 
@@ -27,46 +26,32 @@
 # of exactly 16 digits
 class CreditCard
 
-def initialize(input)
-	@input = input.to_s.split("")
-    puts @input
-	raise ArgumentError.new("The number is not 16 digits") if @input.length != 16
-end
+  def initialize(input)
+	  @input = input.to_s.split("")
+	  raise ArgumentError.new("The number is not 16 digits") if @input.length != 16
+  end
 
 
-
-def ccnumber
-  new_array = []
-  #sum = 0
-	@input.each_with_index do |x,index|
-      if index % 2 == 0
-        x = x.to_i * 2
-      	  if x > 9
-      		  split = x.to_s.split("")
-      		  x = split[0].to_i + split[1].to_i
-      	  end
-  	  end
- #      new_array << @input
- #      puts new_array
- #      sum = new_array.inject(:+)
- #      puts sum
- 	new_array << x
- 	end
- 	sum = new_array.inject(:+)
- 	#   new_array << x
- 	#   new_array.each do |x|
- 	#     sum += x
- 	#   end
- 	#  sum
- 	# end
- 	# sum = new_array.inject(:+)
- 	#puts sum
- 	#puts new_array
- 	#sum += x
-     #end
-   end
-
-end
+  def ccnumber
+    sum = 0
+    new_array = []
+	  @input.each_with_index {|x,index|
+      if index % 2 == 0 
+        new_array << x.to_i * 2
+      else
+        new_array << x.to_i
+      end
+    }
+    another_array = new_array.join("").split("")
+    another_array.each {|x| sum += x.to_i}
+      if sum % 10 == 0 
+        true
+      else
+        false
+      end
+    end
+  end
+#end
 
 #end
 credit_card = CreditCard.new(4563960122001999)
