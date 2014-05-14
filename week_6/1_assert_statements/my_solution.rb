@@ -57,3 +57,29 @@ assert{bakery_num(24, "cookie") == "You need to make 24 cookie(s)."}
 
 
 # 5. Reflection
+=begin
+
+What parts of your strategy worked? What problems did you face?
+ This challenge was pretty simple. After spending some time researching how to put assertions into ruby code, I was pretty confident in my strategy.
+ 
+What questions did you have while coding? What resources did you find to help you answer them?
+ 
+ 
+ Here is a stackoverflow post that helped. I also went over the ruby docs for assert and looked at using assert_block do
+ http://stackoverflow.com/questions/3264168/how-to-put-assertions-in-ruby-code
+
+ 
+ What concepts are you having trouble with, or did you just figure something out? If so, what?
+ None pertaining to this exercise. 
+ 
+Did you learn any new skills or tricks?
+Yes, I learned how to use assert statements to test my code. Now when I run the file in my command line, I should not get an error message stating one of the assertions failed.
+ 
+How confident are you with each of the Learning Competencies?
+ Very Confident.
+Which parts of the challenge did you enjoy?
+ Reading about different assert statements in ruby doc was fun as I saw some other cool things you can do with it.
+ 
+ 
+Which parts of the challenge did you find tedious?
+ None

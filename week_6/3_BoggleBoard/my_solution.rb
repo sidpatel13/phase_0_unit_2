@@ -1,7 +1,7 @@
 # U2.W6: Create a BoggleBoard Class
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge Stella.
 
 
 # 2. Pseudocode
@@ -73,3 +73,24 @@ puts boggle_board.get_column(3)
 puts boggle_board.create_word([3,2])
 
 # 5. Reflection
+=begin
+What parts of your strategy worked? What problems did you face?
+This was similar to a previous challenge and Stella and I decided to work through it step by step again to see if we can come to the same conclusions. We created a boggle board class based on a coordinate system.
+ 
+What questions did you have while coding? What resources did you find to help you answer them?
+ None
+What concepts are you having trouble with, or did you just figure something out? If so, what?
+
+None pertaining to this.
+ 
+Did you learn any new skills or tricks?
+ Yes, going over how to use map to create a coordinate system. It also helped me see how using the map method can be useful.
+ 
+ 
+How confident are you with each of the Learning Competencies?
+ Very Confident
+Which parts of the challenge did you enjoy?
+ All of them! Pairing and going through each step with a partner and having another set of eyes to look over your work was also awesome!
+ 
+Which parts of the challenge did you find tedious?
+ None

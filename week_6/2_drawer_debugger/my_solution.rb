@@ -118,4 +118,24 @@ remove_fork.eat
 #assert {remove_fork.eat == "eating with the fork"}
 
 
-# 5. Reflection 
+# 5. Reflection
+=begin
+What parts of your strategy worked? What problems did you face?
+ I kept running the file and checking what the error messages were and what lines they were on to figure out how to debug. The one error message I received was for fork.eat, for which I took a step back and went through all the driver code to see where I was messing up. I realized that fork had been removed from our list and needed to be added back to the silverware class. Once it is added to the silverware class, we can input into the the Drawer class, which is what some of the code before was doing.
+
+What questions did you have while coding? What resources did you find to help you answer them?
+ I didn't really use any resources for this challenge. I understood the driver code pretty well.
+
+ What concepts are you having trouble with, or did you just figure something out? If so, what?
+ My assert statement for this challenge didn't work. I have commented out my process above and will seek some more help to diagnose the problem.
+
+ Did you learn any new skills or tricks?
+ Yes, I saw how you can input one class into another. Learning about what happens with statements such as:silverware_drawer.add_item(Silverware.new("spoon"))
+
+ 
+How confident are you with each of the Learning Competencies?
+ Confident.
+Which parts of the challenge did you enjoy?
+ Although, this was also tedious, it was fun going through each single line of the driver code to see what was actually being outputted out. Answering the comments in this file was fun.
+Which parts of the challenge did you find tedious?
+Again, starting from the top and putting put statements to see output at each stage was a little tedious.
