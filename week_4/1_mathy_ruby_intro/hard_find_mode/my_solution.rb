@@ -42,7 +42,7 @@ def mode(array)
 		end
 	end
 	new_array = new_array.sort_by {|k,v| v}.last
-	p new_array[0]
+	new_array[0]
 end
 
 mode([1,2,2,2,2,3,3,3])

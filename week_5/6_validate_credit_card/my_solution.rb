@@ -49,12 +49,12 @@ class CreditCard
         true
       else
         false
-      end
+      end 
   end
 end
 
 credit_card = CreditCard.new(4563960122001999)
-puts credit_card.ccnumber
+puts credit_card.check_card
 
 
 # 4. Refactored Solution
@@ -80,4 +80,4 @@ Did you learn any new skills or tricks?
 How confident are you with each of the Learning Competencies?
 Which parts of the challenge did you enjoy?
 Which parts of the challenge did you find tedious?
-
+=end
