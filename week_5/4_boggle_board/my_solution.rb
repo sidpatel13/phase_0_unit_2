@@ -111,4 +111,25 @@ puts board.get_column(2)
 # DRIVER TESTS GO BELOW THIS LINE
 
 
-# Reflection 
+# Reflection
+=begin
+What parts of your strategy worked? What problems did you face?
+ To be honest, I didn't really pseudocode for this challenge. I just started using some of the code provided as a reference point to work on my initial solution.
+ 
+What questions did you have while coding? What resources did you find to help you answer them?
+ I wanted to see what this(coords.map { |coord| board[coord.first][coord.last]}.join("")) did. I worke in irb to see how this coordinate system was set up.
+ 
+ What concepts are you having trouble with, or did you just figure something out? If so, what?
+ I learned how to call terms in rows and columns. Found out how powerful the map method can be.
+ 
+Did you learn any new skills or tricks?
+Yes, *input can allow you input in multiple pieces of data.
+ 
+How confident are you with each of the Learning Competencies?
+Very Confident
+ 
+Which parts of the challenge did you enjoy?
+I think starting with the code provided and writing an initial solution quickly and testing it and changing it simultaneously was fun.
+ 
+ Which parts of the challenge did you find tedious?
+Pseudocode. I wanted to really play with everything so I decided to skip it. I had a basic idea in my head of what I needed.

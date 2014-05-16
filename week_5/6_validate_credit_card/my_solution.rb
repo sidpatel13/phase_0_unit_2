@@ -6,13 +6,14 @@
 # 2. Pseudocode
 
 # Input:
+#sum = 0
 #array = []
 #array << input.to_s.each_character.split('')
 #create index
 #if index % 2 == 0
 #x = take that index's value * 2
 #join all characters and split them again
-#add up all of the terms in the array
+#add up all of the terms in the array array.each {|x| sum += x}
 #
 #
 
@@ -32,7 +33,7 @@ class CreditCard
   end
 
 
-  def ccnumber
+  def check_card
     sum = 0
     new_array = []
 	  @input.each_with_index {|x,index|
@@ -49,11 +50,9 @@ class CreditCard
       else
         false
       end
-    end
   end
-#end
+end
 
-#end
 credit_card = CreditCard.new(4563960122001999)
 puts credit_card.ccnumber
 
@@ -72,4 +71,13 @@ puts credit_card.ccnumber
 
 
 
-# 5. Reflection 
+# 5. Reflection
+=begin
+What parts of your strategy worked? What problems did you face?
+What questions did you have while coding? What resources did you find to help you answer them?
+What concepts are you having trouble with, or did you just figure something out? If so, what?
+Did you learn any new skills or tricks?
+How confident are you with each of the Learning Competencies?
+Which parts of the challenge did you enjoy?
+Which parts of the challenge did you find tedious?
+
