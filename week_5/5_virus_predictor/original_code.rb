@@ -76,22 +76,45 @@ private  #what is this?  what happens if it were cut and pasted above the virus_
     puts " and will spread across the state in #{speed} months.\n\n"
 
   end
-
+ 
 end
 
 #=======================================================================
 
 # DRIVER CODE
+
  # initialize VirusPredictor for each state
 
-=begin
-def each_state
-    STATE_DATA.each do |key, data|
-        key = VirusPredictor.new(key, STATE_DATA[key][:population_density], STATE_DATA[key][:population], STATE_DATA[key][:region], STATE_DATA[key][:regional_spread])
-        key.virus_effects
-    end
-end
+  def each_state
+      STATE_DATA.each do |key, data|
+          state = VirusPredictor.new(key, STATE_DATA[key][:population_density], STATE_DATA[key][:population], STATE_DATA[key][:region], STATE_DATA[key][:regional_spread])
+          puts state.virus_effects
+      end
+  end
 
+each_state
+
+
+=begin
+each_state = VirusPredictor.new(each_state, STATE_DATA[each_state][:population_density], STATE_DATA[each_state][:population], STATE_DATA[each_state][:region], STATE_DATA[each_state][:regional_spread])
+each_state.virus_effects
+=end
+
+=begin
+alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population], STATE_DATA["Alabama"][:region], STATE_DATA["Alabama"][:regional_spread])
+alabama.virus_effects
+
+jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population], STATE_DATA["New Jersey"][:region], STATE_DATA["New Jersey"][:regional_spread])
+jersey.virus_effects
+
+california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population], STATE_DATA["California"][:region], STATE_DATA["California"][:regional_spread])
+california.virus_effects
+
+alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread])
+alaska.virus_effects
+=end
+
+=begin
 
 #pseudocode
 #for each key in STATE_DATA hash (this would be the states right?)
@@ -126,14 +149,4 @@ end
 
 
 
-alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population], STATE_DATA["Alabama"][:region], STATE_DATA["Alabama"][:regional_spread])
-alabama.virus_effects
-
-jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population], STATE_DATA["New Jersey"][:region], STATE_DATA["New Jersey"][:regional_spread]) 
-jersey.virus_effects
-
-california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population], STATE_DATA["California"][:region], STATE_DATA["California"][:regional_spread]) 
-california.virus_effects
-
-alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread]) 
-alaska.virus_effects
+=end
