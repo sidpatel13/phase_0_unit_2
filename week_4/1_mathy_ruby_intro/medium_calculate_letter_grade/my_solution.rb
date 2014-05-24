@@ -51,55 +51,58 @@ ex. avg > 90 => "A"
 =end
 
 # 2. Initial Solution
-def get_grade(array)
-sum=0
-avg=0
-array.each do |x|
-sum += x
-avg = sum/(array.length)
-  end
-	if avg >= 90
-   	return "A"
-   	elsif avg >= 80
-    return "B"
-    elsif avg >= 70
-    return "C"
-    elsif avg >= 60
-    return "D"
-	else
-    return "F"
-    end
-  end
+# def get_grade(array)
+#   sum=0
+#   array.each do |x|
+#    sum += x
+#   end
+#    avg = sum/(array.length)
+# 	if avg >= 90
+#    	  return "A"
+#    	elsif avg >= 80
+#       return "B"
+#     elsif avg >= 70
+#       return "C"
+#     elsif avg >= 60
+#       return "D"
+# 	else
+#       return "F"
+#     end
+
+# end
+
 
 
 
 
 # 3. Refactored Solution
 def get_grade(array)
-	sum=0
-	array.each do |x|
-	sum += x
-	avg = sum/(array.length)
-  	end
-		case get_grade
-		when 90..100
-		"A"
-		when 80..90
-		"B"
-		when 70..80
-		"C"
-		when 60..70
-		"D"
-		when 0..60
-		"F"
-		else
-		"Error"
+  sum=0
+    array.each do |x|
+      sum += x
+    end
+      avg = sum/(array.length)
+		case avg
+		  when 90..100
+		    "A"
+		  when 80..90
+		    "B"
+		  when 70..80
+		    "C"
+		  when 60..70
+		    "D"
+		  when 0..60
+		    "F"
+		  else
+		    "Error"
 		end
 
 
-  end
+end
 
-get_grade([65,93,84,71])
+
+
+#puts get_grade([65,93,84,71])
 
 
 # 4. Reflection 
@@ -133,3 +136,6 @@ Which parts of the challenge did you enjoy?
 I enjoyed the pseudocode this time around. It was also important to think about the  building blocks of the solution and how to solve it.
 
 Which parts of the challenge did you find tedious?
+
+=end
+

@@ -34,18 +34,23 @@ new_array.last
 
 # 2. Initial Solution
 def mode(array)
-	new_array = Hash.new(0)
-	array.each do |i|
+    new_array = Hash.new(0)
+      array.each do |i|
 		if new_array.include?(i)
-			then new_array[i] += 1
-		else new_array[i] = 1
-		end
-	end
-	new_array = new_array.sort_by {|k,v| v}.last
-	new_array[0]
+          new_array[i] += 1
+		else
+          new_array[i] = 1
+        end
+      end
+      final_array=[]
+      new_array.each { |k,v|  final_array << k if v == new_array.values.max}
+      final_array
 end
 
-mode([1,2,2,2,2,3,3,3])
+#end
+#mode([1, 2, 3, 4, 5, 5, 7])
+#mode([1,2,2,2,2,3,3,3])
+#mode(["apple", "banana", "clementine", "banana", "cherry", "strawberry", "cherry"])
 
 # 3. Refactored Solution
 
@@ -77,3 +82,4 @@ I think doing research for the problem and playing around with code to see how t
 
 Which parts of the challenge did you find tedious?
 Debugging the code was tedious. I had little problems that prevented my code from running properly.
+=end
